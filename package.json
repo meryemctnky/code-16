@@ -10,6 +10,16 @@
     "preview": "vite preview",
     "start": "vite serve dist"
   },
+  "vite": {
+    "server": {
+      "port": 8080
+    },
+    "optimizeDeps": {
+      "include": [
+        "./src/main.js"
+      ]
+    }
+  },
   "dependencies": {
     "axios": "^1.5.0",
     "bootstrap": "^5.3.1",
