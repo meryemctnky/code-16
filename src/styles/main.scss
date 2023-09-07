@@ -1,0 +1,281 @@
+// BASIC SETTINGS AND VARIABLES
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap');
+$font-family-base: 'Inter', sans-serif;
+$headings-font-family: 'Inter', sans-serif;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+$enable-grid-classes: false;
+$primary: #273b98;
+$secondary: #e4e4e1;
+$success: #b8e347;
+$danger: #dc3545;
+$light: #eef0f2;
+$dark: #0f173b;
+
+// BOOTSTRAP SETTINGS
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $success;
+$navbar-dark-hover-color: $success;
+$headings-color: $primary;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// DARK THEME STYLES
+[data-bs-theme='dark'] {
+  // Navigation Links
+  .nav-link {
+    color: $light;
+    &:hover {
+      color: $success;
+    }
+  }
+
+  // Headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $light;
+  }
+
+  // Backgrounds
+  .hero,
+  .content,
+  .counts {
+    background-color: #212529 !important;
+  }
+
+  // Category Styles
+  .categorie {
+    border-bottom: solid 4px #212529;
+    &-icon {
+      color: $success !important;
+    }
+  }
+
+  // Counter Styles
+  .counter-text,
+  .count-desc {
+    color: $primary !important;
+  }
+
+  // Services Section
+  .services p {
+    color: $light !important;
+  }
+
+  // See More Button
+  .seeMore-btn {
+    background-color: #b8e347;
+  }
+
+  @media (max-width: 992px) {
+    .hero::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.72);
+    }
+
+    .container {
+      z-index: 2;
+    }
+  }
+}
+
+// BOX SHADOW STYLES
+.box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-t {
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+// HERO SECTION STYLES
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../assets/20484.png) right top no-repeat;
+  background-color: $success;
+  background-size: auto 100%;
+  padding: 0;
+
+  @media (max-width: 992px) {
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.72);
+    }
+
+    .container {
+      z-index: 2;
+    }
+  }
+}
+
+// ICON CIRCLE STYLES
+.icon-circle {
+  width: 44px;
+  height: 44px;
+
+  svg {
+    font-size: 22px;
+  }
+}
+
+// SEE MORE BUTTON STYLES
+.seeMore-btn {
+  background-color: $primary;
+  color: $light;
+
+  &:hover {
+    color: $primary;
+    border: solid 1px $primary;
+  }
+}
+
+// ANIMATION STYLES
+.fade-up {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fade-up 1.5s ease forwards;
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.6);
+  animation: zoom-in 1.5s ease forwards;
+}
+
+@keyframes zoom-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fade-left 1.5s ease forwards;
+}
+
+@keyframes fade-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// CUSTOM CARD STYLES
+.custom-card {
+  img {
+    object-position: left center;
+  }
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    flex: 1;
+    object-fit: cover;
+    height: 350px;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+// IFRAME STYLES
+.iframe {
+  width: 100%;
+  height: 1100px;
+}
+
+// CATEGORY ICON STYLES
+.categorie-icon {
+  font-size: 72px;
+  cursor: pointer;
+
+  &:hover {
+    color: $success !important;
+  }
+}
+
+// CATEGORY STYLES
+.categorie {
+  border-bottom: solid 4px white;
+
+  &:hover {
+    border-bottom: solid 4px $success;
+  }
+}
+
+// SERVICES CARD STYLES
+.services .card {
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.07);
+
+    .card-title {
+      &:hover {
+        color: $success;
+      }
+    }
+  }
+}
+
+// CONTENT IMAGE STYLES
+.content-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+// SIGNUP SECTION STYLES
+.signup {
+  width: 100%;
+  height: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.contact-textarea {
+  height: 120px;
+}
+
+.favorites {
+  .col {
+    height: 100vh;
+  }
+}
