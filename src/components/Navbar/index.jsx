@@ -5,7 +5,7 @@ import logo from '../../assets/logo.png';
 import { useAuth } from '../../contexts';
 
 const Navbar = () => {
-  const { isLoggedIn, logout } = useAuth();
+  const { isLoggedIn, logout, user } = useAuth();
   const navigate = useNavigate('/');
 
   const handleClick = async () => {
@@ -49,6 +49,7 @@ const Navbar = () => {
                   </Link>
 
                   <ul className='dropdown-menu'>
+                    <li className='dropdown-item'>{JSON.stringify(user.email)}</li>
                     <li>
                       <Link to='/favorites' className='dropdown-item'>
                         Favorites
