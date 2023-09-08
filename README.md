@@ -8,7 +8,7 @@ SmartCity is a responsive web site that allows users to list of smart city proje
 
 ![home-page](/smart-city/src/assets/smartcity.png)
 
-## See Live : [Here](https://code-16-git-master-meryemctnky.vercel.app/)
+## See Live : [Here](https://code16-meryemctnky.vercel.app/)
 
 ## Technologies Used
 
@@ -19,26 +19,5 @@ SmartCity is a responsive web site that allows users to list of smart city proje
 - [Bootstrap](https://getbootstrap.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-
-## Setup
-
-- In the project directory, ou can follow the steps below to download the dependencies:
-  - Install with npm:
-  ```sh
-  npm i
-  ```
-  - Install with yarn:
-  ```sh
-  yarn install
-  ```
-- Run React dev server (http://localhost:5173/)
-  - Run with npm:
-  ```sh
-  npm run dev
-  ```
-  - Run with yarn:
-  ```sh
-  yarn run dev
-  ```
 
 ## Screenshot
