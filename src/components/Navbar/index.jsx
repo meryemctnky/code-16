@@ -49,7 +49,7 @@ const Navbar = () => {
                   </Link>
 
                   <ul className='dropdown-menu'>
-                    <li className='dropdown-item'>{JSON.stringify(user.email)}</li>
+                    <li className='dropdown-item fw-bold'>{user.email}</li>
                     <li>
                       <Link to='/favorites' className='dropdown-item'>
                         Favorites
