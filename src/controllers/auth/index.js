@@ -1,6 +1,8 @@
 import Boom from 'boom';
 import User from '../../models/user';
 import { signAccessToken, signRefreshToken, verifyRefreshToken } from '../../helpers/jwt';
+import sendVerificationEmail from '../../helpers/email';
+import generateVerificationLink from '../../helpers/verificationLink';
 
 import Schema from './validations';
 import redis from '../../clients/redis';
@@ -30,6 +32,9 @@ const Register = async (req, res, next) => {
 
     const accessToken = await signAccessToken(user._id);
     const refreshToken = await signRefreshToken(user._id);
+
+    const verificationLink = generateVerificationLink(user._id);
+    await sendVerificationEmail(user.email, verificationLink);
 
     res.json({
       user: userData,
